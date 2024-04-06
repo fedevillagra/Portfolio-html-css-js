@@ -409,14 +409,6 @@ article .icon {
 
 .mail{
   cursor: pointer;
- /*content: "Copied";
-  position: absolute;
-  top: -50px;
-  right: 0px;
-  background-color: aqua;
-  padding: 8px 10px;
-  border-radius: 20px;
-  font-size: 15px;*/
 }
 
 #mensaje-copiado {

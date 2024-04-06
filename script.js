@@ -30,21 +30,16 @@ const mostrarMensajeCopiado = () => {
     var mensajeCopiado = document.createElement('div');
     mensajeCopiado.textContent = 'Copied';
     mensajeCopiado.id = 'mensaje-copiado';
-
     // Agrega el mensaje al cuerpo del documento
     document.body.appendChild(mensajeCopiado);
-
     // Obtiene la posición del cursor
     var posX = event.clientX;
     var posY = event.clientY;
-
     // Establece la posición del mensaje cerca del cursor
     mensajeCopiado.style.left = (posX + 10) + 'px'; // Añade 10px para separarlo del cursor
     mensajeCopiado.style.top = (posY + 10) + 'px'; // Añade 10px para separarlo del cursor
-
     // Muestra el mensaje
     mensajeCopiado.style.display = 'block';
-
     // Oculta el mensaje después de un tiempo
     setTimeout(function() {
         mensajeCopiado.style.display = 'none';
