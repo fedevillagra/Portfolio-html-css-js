@@ -49,6 +49,9 @@
 }
 
 @media screen and (max-width: 600px) {
+  .section__pic-container{
+    width: auto; /* para que las imagenes entren correctamente en la pantalla */
+  }
   section {
     padding-top: 0;
   }
