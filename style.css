@@ -286,7 +286,7 @@ section {
 .about-profile {
   width: 100%; 
   height: 100%; 
-  object-fit: cover; 
+  object-fit: cover; /* para que la imagen no se deforme */
   border-radius: 50%; 
 }
 
@@ -375,6 +375,8 @@ article .icon {
   border-radius: 2rem;
   width: 90%;
   height: 90%;
+  max-height: 289px;
+  object-fit: cover; /* para que la imagen no se deforme */
 }
 
 .project-title {

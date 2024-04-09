@@ -18,6 +18,7 @@ let fechaActual = new Date();
 let anioActual = fechaActual.getFullYear();
 document.getElementById('anio-actual').textContent = anioActual + " ";
 
+/*
 // copiar mail
 const mail = document.querySelector('.mail');
 const copiarMail = () => {
@@ -45,3 +46,4 @@ const mostrarMensajeCopiado = () => {
         mensajeCopiado.style.display = 'none';
     }, 500); // Oculta el mensaje después de 0.5 segundos
 }
+*/
