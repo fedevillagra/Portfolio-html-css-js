@@ -98,24 +98,8 @@
   .text-container {
     text-align: justify;
   }
-  #nightowl-switcher-default{
-    left: calc(-150px + 100vw) !important;
-  }
 }
 
-@media screen and (max-width: 385px) {
-  #nightowl-switcher-default{
-    left: calc(-120px + 100vw) !important;
-  }
-}
-@media screen and (max-width: 735px) and (min-width: 500px) {
-  #nightowl-switcher-default{
-    left: calc(0px) !important;
-  }
-}
-@media screen and (max-width: 350px) {
-  #nightowl-switcher-default{
-    left: calc(0px) !important;
-    top: calc(60px) !important;
-  }
+#nightowl-switcher-default {
+  position: static !important;
 }

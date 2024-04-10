@@ -48,6 +48,7 @@ const mostrarMensajeCopiado = () => {
 }
 */
 
+
 // ---  Contruir las cards con js ----
 // Datos de los proyectos
 const proyectos = [
@@ -128,3 +129,41 @@ function crearBoton(texto, enlace) {
 }
 // Llamar a la función para construir las cards
 construirCards();
+
+
+// Agregar el boton de darkmode a la navbar
+async function moverDivANavbar() {
+  // Función para crear una promesa que se resuelve cuando el elemento existe en el DOM
+  function waitForElement(selector) {
+      return new Promise((resolve) => {
+          const element = document.querySelector(selector);
+          if (element) {
+              resolve(element);
+          } else {
+              const observer = new MutationObserver((mutationsList) => {
+                  for (const mutation of mutationsList) {
+                      if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+                          const addedElement = Array.from(mutation.addedNodes).find(node => node.id === 'nightowl-switcher-default');
+                          if (addedElement) {
+                              observer.disconnect();
+                              resolve(addedElement);
+                          }
+                      }
+                  }
+              });
+              observer.observe(document.body, { childList: true, subtree: true });
+          }
+      });
+  }
+
+  // Esperar a que el elemento se cree en el DOM
+  const nightOwlSwitcher = await waitForElement('#nightowl-switcher-default');
+  const nightOwlSwitcherClone = nightOwlSwitcher.cloneNode(true);
+  
+  // Mover el div al navbar
+  const navbar = document.getElementById('desktop-nav');
+  const navbarResponsive = document.getElementById('hamburger-nav');
+  navbar.appendChild(nightOwlSwitcher);
+  navbarResponsive.appendChild(nightOwlSwitcherClone);
+}
+moverDivANavbar();
