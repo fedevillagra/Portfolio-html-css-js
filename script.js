@@ -131,7 +131,7 @@ function crearBoton(texto, enlace) {
 construirCards();
 
 
-// Agregar el boton de darkmode a la navbar
+// Agregar el boton de darkmode a las dos navbar
 async function moverDivANavbar() {
   // Función para crear una promesa que se resuelve cuando el elemento existe en el DOM
   function waitForElement(selector) {
@@ -158,12 +158,26 @@ async function moverDivANavbar() {
 
   // Esperar a que el elemento se cree en el DOM
   const nightOwlSwitcher = await waitForElement('#nightowl-switcher-default');
-  const nightOwlSwitcherClone = nightOwlSwitcher.cloneNode(true);
   
-  // Mover el div al navbar
+  // Tomar los dos nav
   const navbar = document.getElementById('desktop-nav');
   const navbarResponsive = document.getElementById('hamburger-nav');
+
   navbar.appendChild(nightOwlSwitcher);
-  navbarResponsive.appendChild(nightOwlSwitcherClone);
+
+  // Función para mover el elemento entre navbars
+  function moverElementoSegunAnchoDePantalla() {
+    if (window.innerWidth <= 1200) {
+        navbarResponsive.appendChild(nightOwlSwitcher);
+    } else {
+        navbar.appendChild(nightOwlSwitcher);
+    }
+}
+
+// Llamar a la función inicialmente para establecer el padre correcto
+moverElementoSegunAnchoDePantalla();
+
+// Escuchar cambios en el tamaño de la ventana y llamar a la función para actualizar el padre del elemento
+window.addEventListener('resize', moverElementoSegunAnchoDePantalla);
 }
 moverDivANavbar();
