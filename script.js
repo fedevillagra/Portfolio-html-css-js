@@ -68,7 +68,7 @@ const proyectos = [
       nombre: "Shopping app",
       imagen: "./assets/project-3.png",
       github: "https://github.com/fedevillagra/Proyecto_Final_Backend",
-      open: "https://github.com/fedevillagra"
+      open: "https://backend-proyect-federicovillagra.koyeb.app/"
   },
   {
       nombre: "Tic-Tac-Toe app",
