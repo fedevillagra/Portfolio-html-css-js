@@ -101,5 +101,5 @@
 }
 
 #nightowl-switcher-default {
-  position: static !important;
+  position: static !important; /* Para que el boton de darkmode se vea en la Navbar*/
 }

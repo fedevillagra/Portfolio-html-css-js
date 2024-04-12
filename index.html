@@ -11,14 +11,16 @@
     <script type="module" src="https://cdn.jsdelivr.net/npm/@bufferhead/nightowl@0.0.14/dist/nightowl.js"></script>
   </head>
   <body>
+
+    <!-- BARRA DE NAVEGACION -->
     <nav id="desktop-nav">
       <div class="logo name-profile"></div>
       <div>
         <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about" class="translate">About</a></li>
+          <li><a href="#experience" class="translate">Experience</a></li>
+          <li><a href="#projects" class="translate">Projects</a></li>
+          <li><a href="#contact" class="translate">Contact</a></li>
         </ul>
       </div>
     </nav>
@@ -31,29 +33,31 @@
           <span></span>
         </div>
         <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          <li><a href="#about" onclick="toggleMenu()" class="translate">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()" class="translate">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()" class="translate">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()" class="translate">Contact</a></li>
         </div>
       </div>
     </nav>
+
+    <!-- PERFIL (PRESENTACION) -->
     <section id="profile">
       <div class="section__pic-container">
         <img src="./assets/profile-pic.png" class="about-profile" alt="John Doe profile picture" />
       </div>
       <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
+        <p class="section__text__p1 translate">Hello, I'm</p>
         <h1 class="title name-profile"></h1>
-        <p class="section__text__p2">Full-Stack Developer</p>
+        <p class="section__text__p2 translate">Full-Stack Developer</p>
         <div class="btn-container">
           <button
-            class="btn btn-color-2"
+            class="btn btn-color-2 translate"
             onclick="window.open('./assets/resume.pdf')"
           >
             View my CV
           </button>
-          <button class="btn btn-color-1" onclick="location.href='#contact'">
+          <button class="btn btn-color-1 translate" onclick="location.href='#contact'">
             Contact Info
           </button>
         </div>
@@ -73,9 +77,11 @@
         </div>
       </div>
     </section>
+
+    <!-- ACERCA DE MI -->
     <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
+      <p class="section__text__p1 translate">Get To Know More</p>
+      <h1 class="title translate">About Me</h1>
       <div class="section-container">
         <div class="section__pic-container">
           <img
@@ -92,8 +98,9 @@
                 alt="Experience icon"
                 class="icon"
               />
-              <h3>Experience</h3>
-              <p>6 months <br />Full-stack Developer</p>
+              <h3 class="translate">Experience</h3>
+              <p class="translate">6 months</p>
+              <p class="translate">Full-stack Developer</p>
             </div>
             <div class="details-container">
               <img
@@ -101,12 +108,13 @@
                 alt="Education icon"
                 class="icon"
               />
-              <h3>Education</h3>
-              <p>FullStack Web Diploma degree<br />Software Engineering ongoing</p>
+              <h3 class="translate">Education</h3>
+              <p class="translate">FullStack Web Diploma degree</p>
+              <p class="translate">Software Engineering ongoing</p>
             </div>
           </div>
           <div class="text-container">
-            <p>
+            <p class="translate">
               Passionate about web development and its potential to improve daily life
               through intuitive app design. Proficient in creating flawless web applications
               and collaborating with teams to achieve success. I value multidisciplinary scope
@@ -122,152 +130,14 @@
         onclick="location.href='./#experience'"
       />
     </section>
+
+    <!-- EXPERIENCIA -->
     <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
+      <p class="section__text__p1 translate">Explore My</p>
+      <h1 class="title translate">Experience</h1>
       <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Bootstrap</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Tailwind</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>React</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Backend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Express JS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node JS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>MongoDB</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PHP</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>MySQL</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-            </div>
+        <div class="about-containers" id="experiencee">
+          <!-- Cuadros hechos con JS -->
           </div>
         </div>
       </div>
@@ -278,9 +148,11 @@
         onclick="location.href='./#projects'"
       />
     </section>
+
+    <!-- PROYECTOS -->
     <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
+      <p class="section__text__p1 translate">Browse My Recent</p>
+      <h1 class="title translate">Projects</h1>
       <div class="experience-details-container">
         <div class="about-containers" id="cards">
           <!-- JS CODE -->
@@ -293,9 +165,11 @@
         onclick="location.href='./#contact'"
       />
     </section>
+
+    <!-- CONTACTO -->
     <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
+      <p class="section__text__p1 translate">Get in Touch</p>
+      <h1 class="title translate">Contact Me</h1>
       <div class="contact-info-upper-container">
         <div class="contact-info-container">
           <img
@@ -315,18 +189,19 @@
         </div>
       </div>
     </section>
+
     <footer>
       <nav>
         <div class="nav-links-container">
           <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about" class="translate">About</a></li>
+            <li><a href="#experience" class="translate">Experience</a></li>
+            <li><a href="#projects" class="translate">Projects</a></li>
+            <li><a href="#contact" class="translate">Contact</a></li>
           </ul>
         </div>
       </nav>
-      <p>Copyright &#169; <span id="anio-actual"/></span><span class="name-profile"/></span>. All Rights Reserved.</p>
+      <p>Copyright &#169; <span id="anio-actual"></span> <span class="name-profile"></span>. All Rights Reserved.</p>
     </footer>
     <script src="script.js"></script>
   </body>
