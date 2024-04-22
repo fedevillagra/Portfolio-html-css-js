@@ -52,7 +52,7 @@ for (const category in experiences) {
   categoryContainer.classList.add("details-container");
 
   const categoryTitle = document.createElement("h2");
-  categoryTitle.classList.add("experience-sub-title");
+  categoryTitle.classList.add("experience-sub-title", "translate");
   categoryTitle.textContent = category;
 
   const articleContainer = document.createElement("div");
