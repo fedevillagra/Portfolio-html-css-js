@@ -74,6 +74,9 @@
   .btn-container {
     flex-wrap: wrap;
   }
+  #about{
+    margin-bottom: 3rem;
+  }
   .contact-info-container p,
   .nav-links li a {
     font-size: 1rem;

@@ -116,7 +116,7 @@ const proyectos = [
       nombre: "Tic-Tac-Toe App",
       imagen: "./assets/project-4.png",
       github: "https://github.com/fedevillagra/tic-tac-toe",
-      open: "https://fv-tic-tac-toe.vercel.app/TicTacToe"
+      open: "https://fv-tic-tac-toe.vercel.app/"
   }
 ];
 // Función para construir las cards de proyectos
@@ -309,3 +309,35 @@ const mostrarMensajeCopiado = () => {
     }, 500); // Oculta el mensaje después de 0.5 segundos
 }
 */ // ---------------------------------------------------------------------------------------------
+
+//----------------- visibility ------------------
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-links a, .menu-links a");
+  
+    function hideAllSections() {
+      sections.forEach(section => {
+        section.style.display = "none";
+      });
+    }
+  
+    function showSection(sectionId) {
+      hideAllSections();
+      const sectionToShow = document.querySelector(sectionId);
+      if (sectionToShow) {
+        sectionToShow.style.display = "";
+      }
+    }
+  
+    navLinks.forEach(link => {
+      link.addEventListener("click", function (event) {
+        event.preventDefault();
+        const targetSection = this.getAttribute("href");
+        showSection(targetSection);
+      });
+    });
+  
+    // Mostrar una sección por defecto
+    showSection("#profile");
+  });
