@@ -335,6 +335,14 @@ const mostrarMensajeCopiado = () => {
         event.preventDefault();
         const targetSection = this.getAttribute("href");
         showSection(targetSection);
+
+      // Scroll to top when a footer link is clicked
+      if (this.closest("footer")) {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      }
       });
     });
   
