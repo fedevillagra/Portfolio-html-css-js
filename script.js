@@ -96,25 +96,25 @@ for (const category in experiences) {
 const proyectos = [
   {
       nombre: "E-commerce App",
-      imagen: "./assets/project-1.png",
+      imagen: "./assets/project-1.avif",
       github: "https://github.com/fedevillagra/React.js",
       open: "https://proyecto-final-federico-villagra.vercel.app/"
   },
   {
       nombre: "Weather App",
-      imagen: "./assets/project-2.png",
+      imagen: "./assets/project-2.avif",
       github: "https://github.com/fedevillagra/weather-app-next.js",
       open: "https://weather-app-next-js-fedevillagra.vercel.app/"
   },
   {
       nombre: "Shopping App",
-      imagen: "./assets/project-3.png",
+      imagen: "./assets/project-3.avif",
       github: "https://github.com/fedevillagra/Proyecto_Final_Backend",
       open: "https://backend-proyect-federicovillagra.koyeb.app/"
   },
   {
       nombre: "Tic-Tac-Toe App",
-      imagen: "./assets/project-4.png",
+      imagen: "./assets/project-4.avif",
       github: "https://github.com/fedevillagra/tic-tac-toe",
       open: "https://fv-tic-tac-toe.vercel.app/"
   }
