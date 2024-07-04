@@ -280,36 +280,6 @@ const userLanguage = navigator.language || navigator.userLanguage;
 (userLanguage!='en-US') && translatePage(userLanguage);
 // ---------------------------------------------------------------------------------------------
 
-/*
-// --- Copiar mail ---
-const mail = document.querySelector('.mail');
-const copiarMail = () => {
-  navigator.clipboard.writeText(mail.textContent);
-  mostrarMensajeCopiado();
-};
-mail.addEventListener("click", copiarMail);
-const mostrarMensajeCopiado = () => {
-    // Crea el mensaje "copiado"
-    var mensajeCopiado = document.createElement('div');
-    mensajeCopiado.textContent = 'Copied';
-    mensajeCopiado.id = 'mensaje-copiado';
-    // Agrega el mensaje al cuerpo del documento
-    document.body.appendChild(mensajeCopiado);
-    // Obtiene la posición del cursor
-    var posX = event.clientX;
-    var posY = event.clientY;
-    // Establece la posición del mensaje cerca del cursor
-    mensajeCopiado.style.left = (posX + 10) + 'px'; // Añade 10px para separarlo del cursor
-    mensajeCopiado.style.top = (posY + 10) + 'px'; // Añade 10px para separarlo del cursor
-    // Muestra el mensaje
-    mensajeCopiado.style.display = 'block';
-    // Oculta el mensaje después de un tiempo
-    setTimeout(function() {
-        mensajeCopiado.style.display = 'none';
-    }, 500); // Oculta el mensaje después de 0.5 segundos
-}
-*/ // ---------------------------------------------------------------------------------------------
-
 //----------------- visibility ------------------
 
   document.addEventListener("DOMContentLoaded", function () {
@@ -326,6 +296,7 @@ const mostrarMensajeCopiado = () => {
       hideAllSections();
       const sectionToShow = document.querySelector(sectionId);
       if (sectionToShow) {
+        sectionToShow.style.animation= "appear 1s";
         sectionToShow.style.display = "";
       }
     }
@@ -336,13 +307,13 @@ const mostrarMensajeCopiado = () => {
         const targetSection = this.getAttribute("href");
         showSection(targetSection);
 
-      // Scroll to top when a footer link is clicked
+      /* Scroll to top when a footer link is clicked
       if (this.closest("footer")) {
         window.scrollTo({
           top: 0,
           behavior: "smooth"
         });
-      }
+      }*/
       });
     });
   

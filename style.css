@@ -409,15 +409,6 @@ article .icon {
   cursor: pointer;
 }
 
-#mensaje-copiado {
-    position: fixed;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    display: none; /* Inicialmente oculto */
-}
-
 .contact-info-container {
   display: flex;
   align-items: center;
@@ -447,4 +438,15 @@ footer {
 
 footer p {
   text-align: center;
+}
+
+/* smooth transition among sections */
+@keyframes appear {
+  from{
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
