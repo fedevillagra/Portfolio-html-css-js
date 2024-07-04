@@ -296,7 +296,7 @@ const userLanguage = navigator.language || navigator.userLanguage;
       hideAllSections();
       const sectionToShow = document.querySelector(sectionId);
       if (sectionToShow) {
-        sectionToShow.style.animation= "appear 1s";
+        sectionToShow.style.animation= "appear 0.5s";
         sectionToShow.style.display = "";
       }
     }
