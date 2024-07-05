@@ -296,8 +296,8 @@ const userLanguage = navigator.language || navigator.userLanguage;
       hideAllSections();
       const sectionToShow = document.querySelector(sectionId);
       if (sectionToShow) {
-        sectionToShow.style.animation= "appear 0.5s";
         sectionToShow.style.display = "";
+        sectionToShow.style.animation= "appear 0.5s";
       }
     }
   
@@ -314,9 +314,16 @@ const userLanguage = navigator.language || navigator.userLanguage;
           behavior: "smooth"
         });
       }*/
+
+      // Add clicked class for scale effect
+      navLinks.forEach(navLink => navLink.classList.remove("clicked"));
+      this.classList.add("clicked");
+
       });
     });
   
     // Mostrar una sección por defecto
     showSection("#profile");
   });
+
+// ---------------------------------------------------------------------------------------------
