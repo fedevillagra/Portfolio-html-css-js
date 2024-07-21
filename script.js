@@ -98,7 +98,7 @@ const proyectos = [
       nombre: "E-commerce App",
       imagen: "./assets/project-1.avif",
       github: "https://github.com/fedevillagra/React.js",
-      open: "https://proyecto-final-federico-villagra.vercel.app/"
+      open: "https://hendrick.vercel.app/"
   },
   {
       nombre: "Weather App",
