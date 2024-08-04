@@ -33,8 +33,8 @@ const experiences = {
     { technology: "React", level: "Experienced" }
   ],
   "Backend Development": [
-    { technology: "Express JS", level: "Experienced" },
     { technology: "Node JS", level: "Experienced" },
+    { technology: "Express JS", level: "Experienced" },
     { technology: "MongoDB", level: "Experienced" },
     { technology: "Git", level: "Intermediate" },
     { technology: "PHP", level: "Experienced" },
