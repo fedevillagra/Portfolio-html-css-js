@@ -316,8 +316,8 @@ const userLanguage = navigator.language || navigator.userLanguage;
       }*/
 
       // Add clicked class for scale effect
-     //navLinks.forEach(navLink => navLink.classList.remove("clicked"));
-     //this.classList.add("clicked");
+     navLinks.forEach(navLink => navLink.classList.remove("clicked"));
+     this.classList.add("clicked");
 
       });
     });

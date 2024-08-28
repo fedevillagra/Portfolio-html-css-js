@@ -472,6 +472,6 @@ footer p {
   }
 }
 
-.nav-links a:focus, .menu-links a.clicked {
+.nav-links a.clicked, .menu-links a.clicked {
   animation: pressNav .1s linear both;
 }

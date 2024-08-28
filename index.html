@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio - FV</title>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" as="style" />
+    <link rel="preload" href="./assets/profile-pic.avif" as="image" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
-    <link rel="icon" type="image/png" href="assets/favicon.ico">
-    <script async type="module" src="https://cdn.jsdelivr.net/npm/@bufferhead/nightowl@0.0.14/dist/nightowl.js"></script>
+    <link rel="icon" type="image/png" href="assets/favicon.ico" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@bufferhead/nightowl@0.0.14/dist/nightowl.js"></script>
   </head>
   <body>
     <!-- BARRA DE NAVEGACION -->
@@ -46,7 +47,7 @@
     <!-- PERFIL (PRESENTACION) -->
     <section id="profile">
       <div class="section__pic-container">
-        <img src="./assets/profile-pic.avif" class="about-profile" alt="John Doe profile picture" />
+        <img src="./assets/profile-pic.avif" class="about-profile" alt="profile picture" loading="lazy"/>
       </div>
       <div class="section__text">
         <p class="section__text__p1 translate">Hello, I'm</p>
