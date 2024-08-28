@@ -297,7 +297,7 @@ const userLanguage = navigator.language || navigator.userLanguage;
       const sectionToShow = document.querySelector(sectionId);
       if (sectionToShow) {
         sectionToShow.style.display = "";
-        sectionToShow.style.animation= "appear 0.5s";
+        sectionToShow.style.animation= "appear .7s linear both";
       }
     }
   
