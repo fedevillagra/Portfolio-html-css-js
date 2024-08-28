@@ -316,14 +316,18 @@ const userLanguage = navigator.language || navigator.userLanguage;
       }*/
 
       // Add clicked class for scale effect
-      navLinks.forEach(navLink => navLink.classList.remove("clicked"));
-      this.classList.add("clicked");
+     //navLinks.forEach(navLink => navLink.classList.remove("clicked"));
+     //this.classList.add("clicked");
 
       });
     });
   
     // Mostrar una sección por defecto
-    showSection("#profile");
+    //showSection("#profile"); //el problema es que cuando carga la página por primera vez hace el efecto
+    sections.forEach(section => {
+      (section.id!="profile") && (section.style.display = "none");
+    });
+
   });
 
 // ---------------------------------------------------------------------------------------------
