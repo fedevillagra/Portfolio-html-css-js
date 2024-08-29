@@ -174,14 +174,6 @@ section {
   height: 80vh;
 }
 
-.section__pic-container {
-  position: relative; /* Necesario para que el texto se posicione dentro del contenedor */
-  display: flex;
-  height: 400px;
-  width: 400px;
-  margin: auto 0;
-}
-
 .section__text {
   align-self: center;
   text-align: center;
@@ -293,6 +285,19 @@ section {
   display: flex;
 }
 
+.section__pic-container {
+  position: relative;
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+#profile .section__pic-container{
+  border-radius: 50%; /* el contenedor tiene que ser tambien redondo para las interacciones de hover */
+  overflow: hidden;
+}
+
 .about-profile {
   width: 100%; 
   height: 100%; 
@@ -300,12 +305,12 @@ section {
   border-radius: 50%; 
 }
 
-.section__pic-container:hover .about-profile{
-  opacity: 0.3; /* Reduce la opacidad de la imagen cuando se pasa el mouse por encima */
+.section__pic-container:hover .about-profile,.section__pic-container:hover .about-pic{
+  opacity: 0.3; 
   transition: .3s;
 }
 .section__pic-container:hover .overlay-text {
-  opacity: 1; /* Muestra el texto al pasar el mouse por encima */
+  opacity: 1; 
 }
 
 .overlay-text {
@@ -318,14 +323,9 @@ section {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  opacity: 0; /* Oculta el texto inicialmente */
-  transition: .5s; /* Añade una transición suave */
-  /*top: 50%; /* Centra verticalmente */
-  /*left: 50%; /* Centra horizontalmente */
-  /*transform: translate(-50%, -50%); /* Ajusta el posicionamiento */
-  /*font-weight: bold; /* Peso del texto */
-  /*text-align: center; /* Centra el texto */
-  /*pointer-events: none; /* El texto no interferirá con la interacción del mouse */
+  opacity: 0;
+  transition: .5s;
+  border-radius: 50% /* la caja del texto tiene que ser tambien redondo para las interacciones de hover */
 }
 
 .overlay-text h1 {
@@ -346,6 +346,9 @@ section {
 .about-pic {
   border-radius: 2rem;
 }
+#about .section__pic-container{
+  border-radius: 2rem;
+}
 
 .details-container {
   padding: 1.5rem;
@@ -360,12 +363,6 @@ section {
 .section-container {
   gap: 4rem;
   height: 80%;
-}
-
-.section__pic-container {
-  height: 400px;
-  width: 400px;
-  margin: auto 0;
 }
 
 /* EXPERIENCE SECTION */
