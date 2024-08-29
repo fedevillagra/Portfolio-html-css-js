@@ -293,8 +293,8 @@ section {
   margin: auto 0;
 }
 
-#profile .section__pic-container{
-  border-radius: 50%; /* el contenedor tiene que ser tambien redondo para las interacciones de hover */
+.about-profile, #profile .section__pic-container, #profile .overlay-text{
+  border-radius: 50%; /* imagen redonda */
   overflow: hidden;
 }
 
@@ -302,7 +302,6 @@ section {
   width: 100%; 
   height: 100%; 
   object-fit: cover; /* para que la imagen no se deforme */
-  border-radius: 50%; 
 }
 
 .section__pic-container:hover .about-profile,.section__pic-container:hover .about-pic{
@@ -325,7 +324,6 @@ section {
   flex-direction: column;
   opacity: 0;
   transition: .5s;
-  border-radius: 50% /* la caja del texto tiene que ser tambien redondo para las interacciones de hover */
 }
 
 .overlay-text h1 {
@@ -343,10 +341,7 @@ section {
   transform: translateY(0px);
 }
 
-.about-pic {
-  border-radius: 2rem;
-}
-#about .section__pic-container{
+.about-pic, #about .section__pic-container, #about .overlay-text {
   border-radius: 2rem;
 }
 
