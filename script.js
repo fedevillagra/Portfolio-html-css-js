@@ -95,6 +95,12 @@ for (const category in experiences) {
 // Datos de los proyectos
 const proyectos = [
   {
+    nombre: "Coca-Cola App",
+    imagen: "./assets/desktop_.avif",
+    github: "https://github.com/fedevillagra/Coca-Cola",
+    open: "https://coca-cola-fv.vercel.app/"
+  },
+  {
       nombre: "E-commerce App",
       imagen: "./assets/project-1.avif",
       github: "https://github.com/fedevillagra/React.js",
