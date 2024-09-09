@@ -155,7 +155,6 @@ a:hover {
 
 section {
   padding-top: 4vh;
-  height: 96vh;
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
@@ -386,6 +385,18 @@ section {
   flex-direction: row;
   gap: 2.5rem;
   justify-content: space-around;
+  overflow: hidden;
+  position: relative;
+  border-radius: 2rem;
+}
+
+.article-container-img img {
+  transition: transform 0.3s ease-in-out;
+  border-radius: 2rem;
+}
+
+.article-container-img:hover img {
+  transform: scale(1.1);
 }
 
 article {
@@ -510,4 +521,237 @@ footer p {
 
 .nav-links a.clicked, .menu-links a.clicked {
   animation: pressNav .1s linear both;
+}
+
+/* General styles for the Experience Section */
+.experience-section {
+margin-top: 20px;
+}
+
+.container {
+  max-width: auto;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* Experience Card Layout */
+.experience-card {
+  columns: 2;
+  gap: 30px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  transition: transform 0.3s ease-in-out;
+}
+
+
+/* Flexbox for aligning text and logo */
+.experience-header {
+  display: flex;
+  align-items: center; /* Vertically aligns items */
+  gap: 10px; /* Reduce the gap to bring the logo closer */
+}
+
+.company-logo {
+  width: 120px; /* Adjust the size of the logo */
+  height: auto;
+}
+
+.experience-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+}
+
+.experience-content h4 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #4c5257;
+}
+
+.time-period {
+  margin-bottom: 20px;
+}
+
+.general-info {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.responsibilities-title{
+  font-weight: bold;
+}
+
+.responsibilities{
+  list-style-type: disc;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  color: rgb(85, 85, 85);
+}
+
+/* button link website */
+.website-button {
+  display: grid;
+  place-items: center;
+  a {
+    text-decoration: none;
+    color: #000;
+    padding: 0.7em 0.84em;
+    display: inline-block;
+    border: 2px solid transparent;
+    position: relative;
+    font-size: 1em;
+    cursor: pointer;
+    letter-spacing: 0.07em;
+
+    .text {
+      transform: translate3d(0,0.7em,0);
+      display: block;
+      transition: transform 0.4s cubic-bezier(.2,0,0,1) 0.4s;
+    }
+
+    &:after {
+      position: absolute;
+      content: '';
+      bottom: -2px;
+      left: 0.84em;
+      right: 0.84em;
+      height: 2px;
+      background: #000;
+      transition: 
+        transform 0.8s cubic-bezier(1,0,.37,1) 0.2s,
+        right 0.2s cubic-bezier(.04,.48,0,1) 0.6s,
+        left 0.4s cubic-bezier(.04,.48,0,1) 0.6s;
+      transform-origin: left;
+    }
+
+  }
+
+  .line {
+    position: absolute;
+    background: #000;
+
+    &.-right,
+    &.-left {
+      width: 2px;
+      bottom: -2px;
+      top: -2px;
+      transform: scale3d(1,0,1);
+    }  
+
+    &.-top,
+    &.-bottom {
+      height: 2px;
+      left: -2px;
+      right: -2px;
+      transform: scale3d(0,1,1);
+    }
+
+    &.-right {
+      right: -2px;
+      transition: transform 0.1s cubic-bezier(1,0,.65,1.01) 0.23s;
+      transform-origin: top;
+    }
+
+    &.-top {
+      top: -2px;
+      transition: transform 0.08s linear 0.43s;
+      transform-origin: left;
+    }
+
+    &.-left {
+      left: -2px;
+      transition: transform 0.08s linear 0.51s;
+      transform-origin: bottom;
+    }
+
+    &.-bottom {
+      bottom: -2px;
+      transition: transform 0.3s cubic-bezier(1,0,.65,1.01);
+      transform-origin: right;
+    }  
+  }
+
+  a:hover,
+  a:active {
+
+    .text {
+      transform: translate3d(0,0,0);
+      transition: transform 0.6s cubic-bezier(.2,0,0,1) 0.4s;
+    }
+
+    &:after {
+      transform: scale3d(0,1,1);
+      right: -2px;
+      left: -2px;
+      transform-origin: right;
+      transition: 
+        transform 0.2s cubic-bezier(1,0,.65,1.01) 0.17s,
+        right 0.2s cubic-bezier(1,0,.65,1.01),
+        left 0s 0.3s;
+    }
+
+    .line {
+      transform: scale3d(1,1,1);
+
+      &.-right {
+        transition: transform 0.1s cubic-bezier(1,0,.65,1.01) 0.2s;
+        transform-origin: bottom;
+      }
+
+      &.-top {
+        transition: transform 0.08s linear 0.4s;
+        transform-origin: right;
+      }
+
+      &.-left {
+        transition: transform 0.08s linear 0.48s;
+        transform-origin: top;
+      }
+
+      &.-bottom {
+        transition: transform 0.5s cubic-bezier(0,.53,.29,1) 0.56s;
+        transform-origin: left;
+      }
+    }
+
+  }
+}
+
+/* Project Image Styles */
+.project-image {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  border-radius: 1rem;
+}
+
+.project-image img {
+  margin-bottom: 10px;
+  width: 100%;
+  transition: transform 0.3s ease-in-out; 
+  border-radius: 1rem;
+}
+
+.project-image:hover img {
+  transform: scale(1.1); 
+}
+
+@media (max-width: 768px) {
+  .experience-card {
+    columns: 1;
+      flex-direction: column;
+  }
+  
+  .company-logo img {
+      width: 80px;
+  }
 }

@@ -21,9 +21,9 @@ let anioActual = fechaActual.getFullYear();
 document.getElementById('anio-actual').textContent = anioActual;
 // ---------------------------------------------------------------------------------------------
 
-// --- Construir los cuadros de experiencia ---
-// Definir un objeto con la estructura de datos de las experiencias
-const experiences = {
+// --- Construir los cuadros de habilidades ---
+// Definir un objeto con la estructura de datos de las habilidadess
+const skills = {
   "Frontend Development": [
     { technology: "HTML", level: "Experienced" },
     { technology: "CSS", level: "Experienced" },
@@ -42,11 +42,11 @@ const experiences = {
   ]
 };
 
-// Obtener el contenedor de experiencia
-const experienceContainer = document.getElementById("experiencee");
+// Obtener el contenedor de habilidades
+const skillsCaontainer = document.getElementById("skills_container");
 
-// Iterar sobre el objeto de experiencias
-for (const category in experiences) {
+// Iterar sobre el objeto de habilidades
+for (const category in skills) {
   // Crear elementos HTML para cada categoría
   const categoryContainer = document.createElement("div");
   categoryContainer.classList.add("details-container");
@@ -59,7 +59,7 @@ for (const category in experiences) {
   articleContainer.classList.add("article-container");
 
   // Iterar sobre las tecnologías de cada categoría
-  experiences[category].forEach(tech => {
+  skills[category].forEach(tech => {
     const article = document.createElement("article");
 
     const img = document.createElement("img");
@@ -84,10 +84,10 @@ for (const category in experiences) {
     articleContainer.appendChild(article);
   });
 
-  // Agregar los elementos creados al contenedor de experiencia
+  // Agregar los elementos creados al contenedor de habilidades
   categoryContainer.appendChild(categoryTitle);
   categoryContainer.appendChild(articleContainer);
-  experienceContainer.appendChild(categoryContainer);
+  skillsCaontainer.appendChild(categoryContainer);
 }
 // ---------------------------------------------------------------------------------------------
 
@@ -136,7 +136,7 @@ function construirCards() {
 
       // Crear contenedor de imagen
       const imgContainer = document.createElement('div');
-      imgContainer.classList.add('article-container');
+      imgContainer.classList.add('article-container','article-container-img');
       const imagen = document.createElement('img');
       imagen.src = proyecto.imagen;
       imagen.alt = proyecto.nombre;
