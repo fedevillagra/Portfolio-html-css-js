@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio - FV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" as="style" />
     <link rel="preload" href="./assets/profile-pic.avif" as="image" />
     <link rel="stylesheet" href="style.css" />
@@ -141,45 +144,31 @@
     <section id="experience">
       <p class="section__text__p1 translate">Explore My</p>
       <h1 class="title translate">Experience</h1>
-      <div class="experience-details-container">
-        <div class="experience-section" id="experience">
-          <div class="container">
-            <div class="experience-card">
-                <div class="experience-content">
-                  <div class="experience-header">
-                    <img src="./assets/AC_logo.webp" alt="Aerobics Center Logo" class="company-logo">
-                    <div class="experience-info">
-                        <h3 class="translate">Web Developer</h3>
-                        <h4>Aerobics Center</h4>
-                        <p class="time-period translate">(May 2023 - March 2024)</p>
-                    </div>
-                </div>
-                    <p class="general-info translate">
-                        Part-time contract with the aim of converting the static website into a dynamic e-commerce website to provide users (students) with the ability to purchase their training directly through the web.
-                    </p>
-                    <p class="responsibilities-title translate">Responsibilities:</p>
-                    <ul class="responsibilities translate">
-                        <li>Development, maintenance, and optimization of the website using WordPress, WooCommerce, PHP, HTML and CSS.</li>
-                        <li>Configuration of Hostinger server, SEO, and sitemap to improve performance and website visibility.</li>
-                        <li>Implementation and management of analysis tools such as Google Analytics and Google Tag Manager.</li>
-                    </ul>
-
-                </div>
-                <div class="project-image">
-                    <img src="./assets/AC.avif" alt="Aerobics Center Website">
-                </div>
-                <div class="website-button">
-                  <a href="https://aerobicscenter.edu.ar/" target="_blank" >
-                    <span class="text translate">Visit Website</span>
-                    <span class="line -right"></span>
-                    <span class="line -top"></span>
-                    <span class="line -left"></span>
-                    <span class="line -bottom"></span>
-                  </a>
-                </div>
+      <div class="section-container experience">
+        <div class="about-details-container">
+          <div class="experience-header">
+              <img src="./assets/AC_logo.webp" alt="Aerobics Center Logo" class="company-logo">
+            <div>
+              <h3 class="translate">Web Developer</h3>
+              <h4>Aerobics Center</h4>
+              <p class="translate">May 2023 - March 2024</p>
             </div>
-        </div>
           </div>
+          <div class="text-container">
+            <ul class="responsibilities translate">
+              <li>Development, maintenance, and optimization of the website using WordPress, WooCommerce, PHP, HTML and CSS.</li>
+              <li>Configuration of Hostinger server, SEO, and sitemap to improve performance and website visibility.</li>
+              <li>Implementation and management of analysis tools such as Google Analytics and Google Tag Manager.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="project-image">
+          <a href="https://aerobicscenter.edu.ar/" target="_blank">
+            <img src="./assets/AC.avif" alt="Profile picture" class="about-pic"/>
+            <div class="overlay-text">
+              <h4 class="translate">Visit Website</h4>
+            </div>
+          </a>
         </div>
       </div>
     </section>
