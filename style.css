@@ -303,11 +303,11 @@ section {
   object-fit: cover; /* para que la imagen no se deforme */
 }
 
-.section__pic-container:hover .about-profile, .section__pic-container:hover .about-pic, .project-image:hover .about-pic{
+.section__pic-container:hover .about-profile, .section__pic-container:hover .about-pic{
   mask-image: linear-gradient(#000,rgba(0,0,0,0));
   transition: .3s;
 }
-.section__pic-container:hover .overlay-text, .project-image:hover .overlay-text {
+.section__pic-container:hover .overlay-text {
   opacity: 1; 
 }
 
@@ -420,6 +420,10 @@ article .icon {
 
 #projects {
   position: relative;
+}
+
+#cards {
+  flex-wrap: wrap;
 }
 
 .color-container {
