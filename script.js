@@ -346,3 +346,11 @@ const userLanguage = navigator.language || navigator.userLanguage;
   });
 
 // ---------------------------------------------------------------------------------------------
+
+window.onload = function() {
+  // Reemplaza la clase 'hidden' con 'loaded' cuando la página esté completamente cargada
+  document.body.classList.remove('hidden');
+  document.body.classList.add('loaded');
+};
+
+// ---------------------------------------------------------------------------------------------
