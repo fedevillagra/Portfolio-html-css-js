@@ -18,6 +18,21 @@
 }
 
 @media screen and (max-width: 1200px) {
+  .experience-container{
+    height: auto;
+    width: auto;
+    justify-content: center;
+  }
+  .project-image img{
+    width: 500px;
+  }
+  .experience-header{
+    justify-content: center;
+  }
+  .text-container{
+    display: flex;
+    justify-content: center;
+  }
   #desktop-nav {
     display: none;
   }
@@ -53,6 +68,15 @@
 @media screen and (max-width: 600px) {
   .section__pic-container{
     width: auto; /* para que las imagenes entren correctamente en la pantalla */
+  }
+  .experience-container{
+    width: auto;
+  }
+  .experience-header{
+    justify-content: normal;
+  }
+  .text-container{
+    justify-content: normal;
   }
   section {
     padding-top: 0;

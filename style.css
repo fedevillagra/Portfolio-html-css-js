@@ -361,15 +361,12 @@ section {
 
 .text-container p {
   font-family: inter;
+  font-display: swap;
   font-weight: 500;
   color: #000;
 }
 
 /* SKILLS SECTION */
-
-#experience {
-  position: relative;
-}
 
 .experience-sub-title {
   color: rgb(85, 85, 85);
@@ -391,17 +388,21 @@ section {
   flex-direction: row;
   gap: 2.5rem;
   justify-content: space-around;
-  overflow: hidden;
   position: relative;
-  border-radius: 2rem;
 }
+
+.article-radius-container{
+  overflow: hidden;
+  border-radius: 2rem;
+  max-height: 289px;
+}
+
 
 .article-container-img img {
   transition: transform 0.3s ease-in-out;
-  border-radius: 2rem;
 }
 
-.article-container-img:hover img {
+.article-radius-container:hover img {
   transform: scale(1.1);
 }
 
@@ -433,10 +434,9 @@ article .icon {
 
 .project-img {
   border-radius: 2rem;
-  width: 90%;
-  height: 90%;
   max-height: 289px;
   object-fit: cover; /* para que la imagen no se deforme */
+  width: 100%;
 }
 
 .project-title {
@@ -536,6 +536,8 @@ footer p {
 /* General styles for the Experience Section */
 
 .experience{
+  position: relative;
+  justify-content: center;
   margin-top: 2em;
 }
 
@@ -552,6 +554,7 @@ footer p {
 
 .responsibilities{
   font-family: inter;
+  font-display: swap;
   font-weight: 500;
   padding-left: 20px;
 }
@@ -561,21 +564,28 @@ footer p {
   color: #CE0000;
 }
 
+.experience-container{
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: auto;
+  width: 600px;
+}
+
 /* Project Image Styles */
 
 .project-image {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  overflow: hidden;
   position: relative;
-  border-radius: 1rem;
+  overflow: hidden;
+  border-radius: 20px;
+
 }
 
 .project-image img {
   width: 100%;
   transition: transform 0.3s ease-in-out; 
-  border-radius: 1rem;
+  border-radius: 20px;
+
 }
 
 .project-image:hover img {

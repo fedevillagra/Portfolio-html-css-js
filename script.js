@@ -66,6 +66,7 @@ for (const category in skills) {
     img.src = "./assets/checkmark.png";
     img.alt = "Experience icon";
     img.classList.add("icon");
+    img.loading ="lazy";
 
     const div = document.createElement("div");
 
@@ -134,14 +135,22 @@ function construirCards() {
       const cardContainer = document.createElement('div');
       cardContainer.classList.add('details-container', 'color-container');
 
-      // Crear contenedor de imagen
-      const imgContainer = document.createElement('div');
-      imgContainer.classList.add('article-container','article-container-img');
+      // Crear imagen
       const imagen = document.createElement('img');
       imagen.src = proyecto.imagen;
       imagen.alt = proyecto.nombre;
       imagen.classList.add('project-img');
-      imgContainer.appendChild(imagen);
+      imagen.loading ="lazy";
+
+      // Crear radius container de imagen
+      const imgRadiusContainer = document.createElement('div');
+      imgRadiusContainer.classList.add('article-radius-container');
+      imgRadiusContainer.appendChild(imagen);
+
+      // Crear contenedor de imagen y de radius
+      const imgContainer = document.createElement('div');
+      imgContainer.classList.add('article-container','article-container-img');
+      imgContainer.appendChild(imgRadiusContainer);
 
       // Crear título del proyecto
       const titulo = document.createElement('h2');
