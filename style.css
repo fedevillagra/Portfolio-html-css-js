@@ -529,13 +529,9 @@ footer p {
 
 /* smooth transition among sections */
 @keyframes appear {
-  from{
-    scale: .8;
-		clip-path: inset(0% 90% 0% 90%);
-  }
-  to {
-		clip-path: inset(0% 0% 0% 0%);
-  }
+	0%  {
+		opacity: 0; 
+	}
 }
 
 /* navBar transitions */
@@ -562,6 +558,7 @@ footer p {
   position: relative;
   justify-content: center;
   margin-top: 2em;
+  margin-bottom: 10%;
 }
 
 .experience-header {
@@ -593,6 +590,11 @@ footer p {
   align-items: center;
   height: auto;
   width: 600px;
+}
+
+.experience-container .about-pic:hover{
+
+  mask-image: linear-gradient(rgba(0, 0, 0, 0.1), rgb(0, 0, 0), rgba(0, 0, 0), rgba(0, 0, 0, 0.1));
 }
 
 /* Project Image Styles */

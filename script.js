@@ -188,57 +188,7 @@ function crearBoton(texto, enlace) {
 construirCards();
 // ---------------------------------------------------------------------------------------------
 
-// --- Agregar el boton de Darkmode a las dos Navbar ---
-async function moverDivANavbar() {
-  // Función para crear una promesa que se resuelve cuando el elemento existe en el DOM
-  function waitForElement(selector) {
-      return new Promise((resolve) => {
-          const element = document.querySelector(selector);
-          if (element) {
-              resolve(element);
-          } else {
-              const observer = new MutationObserver((mutationsList) => {
-                  for (const mutation of mutationsList) {
-                      if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
-                          const addedElement = Array.from(mutation.addedNodes).find(node => node.id === 'nightowl-switcher-default');
-                          if (addedElement) {
-                              observer.disconnect();
-                              resolve(addedElement);
-                          }
-                      }
-                  }
-              });
-              observer.observe(document.body, { childList: true, subtree: true });
-          }
-      });
-  }
 
-  // Esperar a que el elemento se cree en el DOM
-  const nightOwlSwitcher = await waitForElement('#nightowl-switcher-default');
-  
-  // Tomar los dos nav
-  const navbar = document.getElementById('desktop-nav');
-  const navbarResponsive = document.getElementById('hamburger-nav');
-
-  navbar.appendChild(nightOwlSwitcher);
-
-  // Función para mover el elemento entre navbars
-  function moverElementoSegunAnchoDePantalla() {
-    if (window.innerWidth <= 1200) {
-        navbarResponsive.appendChild(nightOwlSwitcher);
-    } else {
-        navbar.appendChild(nightOwlSwitcher);
-    }
-}
-
-// Llamar a la función inicialmente para establecer el padre correcto
-moverElementoSegunAnchoDePantalla();
-
-// Escuchar cambios en el tamaño de la ventana y llamar a la función para actualizar el padre del elemento
-window.addEventListener('resize', moverElementoSegunAnchoDePantalla);
-}
-moverDivANavbar();
-// ---------------------------------------------------------------------------------------------
 
 // ---- Traducir WEB -----
 function translatePage(targetLanguage) {
@@ -322,13 +272,13 @@ const userLanguage = navigator.language || navigator.userLanguage;
         const targetSection = this.getAttribute("href");
         showSection(targetSection);
 
-      /* Scroll to top when a footer link is clicked
+      /* Scroll to top when a footer link is clicked*/
       if (this.closest("footer")) {
         window.scrollTo({
           top: 0,
           behavior: "smooth"
         });
-      }*/
+      }
 
       // Add clicked class for scale effect
      navLinks.forEach(navLink => navLink.classList.remove("clicked"));
