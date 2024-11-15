@@ -82,6 +82,7 @@ for (const category in skills) {
     h3.textContent = tech.technology;
 
     const p = document.createElement("p");
+    p.classList.add("translate");
     p.textContent = tech.level;
 
     div.appendChild(h3);
