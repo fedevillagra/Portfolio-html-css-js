@@ -10,8 +10,8 @@ function toggleMenu() {
 // --- Nombre de la persona del portfolio ----
 let name_profile = "Federico Villagra";
 let elementos = document.querySelectorAll('.name-profile');
-elementos.forEach(function(elemento) {
-    elemento.textContent = name_profile;
+elementos.forEach(function (elemento) {
+  elemento.textContent = name_profile;
 });
 // ---------------------------------------------------------------------------------------------
 
@@ -24,21 +24,29 @@ document.getElementById('anio-actual').textContent = anioActual;
 // --- Construir los cuadros de habilidades ---
 // Definir un objeto con la estructura de datos de las habilidadess
 const skills = {
-  "Frontend Development": [
+  "Frontend": [
     { technology: "HTML", level: "Experienced" },
     { technology: "CSS", level: "Experienced" },
     { technology: "JavaScript", level: "Experienced" },
-    { technology: "Bootstrap", level: "Intermediate" },
+    { technology: "Bootstrap", level: "Experienced" },
     { technology: "Tailwind", level: "Experienced" },
     { technology: "React", level: "Experienced" }
   ],
-  "Backend Development": [
+  "Backend": [
     { technology: "Node JS", level: "Experienced" },
     { technology: "Express JS", level: "Experienced" },
-    { technology: "MongoDB", level: "Experienced" },
-    { technology: "Git", level: "Intermediate" },
+    { technology: "Nest JS", level: "Experienced" },
     { technology: "PHP", level: "Experienced" },
-    { technology: "MySQL", level: "Experienced" }
+    { technology: "Java", level: "Experienced" },
+    { technology: "C++", level: "Experienced" }
+  ],
+  "Data & DevOps": [
+    { technology: "MongoDB", level: "Experienced" },
+    { technology: "Firebase", level: "Experienced" },
+    { technology: "MySQL", level: "Experienced" },
+    { technology: "Docker", level: "Experienced" },
+    { technology: "Kubernetes", level: "Experienced" },
+    { technology: "Git", level: "Experienced" }
   ]
 };
 
@@ -52,7 +60,7 @@ for (const category in skills) {
   categoryContainer.classList.add("details-container");
 
   const categoryTitle = document.createElement("h2");
-  categoryTitle.classList.add("experience-sub-title", "translate");
+  categoryTitle.classList.add("experience-sub-title");
   categoryTitle.textContent = category;
 
   const articleContainer = document.createElement("div");
@@ -66,7 +74,7 @@ for (const category in skills) {
     img.src = "./assets/checkmark.png";
     img.alt = "Experience icon";
     img.classList.add("icon");
-    img.loading ="lazy";
+    img.loading = "lazy";
 
     const div = document.createElement("div");
 
@@ -102,28 +110,28 @@ const proyectos = [
     open: "https://coca-cola-fv.vercel.app/"
   },
   {
-      nombre: "E-commerce App",
-      imagen: "./assets/project-1.avif",
-      github: "https://github.com/fedevillagra/React.js",
-      open: "https://hendrick.vercel.app/"
+    nombre: "E-commerce App",
+    imagen: "./assets/project-1.avif",
+    github: "https://github.com/fedevillagra/React.js",
+    open: "https://hendrick.vercel.app/"
   },
   {
-      nombre: "Weather App",
-      imagen: "./assets/project-2.avif",
-      github: "https://github.com/fedevillagra/weather-app-next.js",
-      open: "https://weather-app-next-js-fedevillagra.vercel.app/"
+    nombre: "Weather App",
+    imagen: "./assets/project-2.avif",
+    github: "https://github.com/fedevillagra/weather-app-next.js",
+    open: "https://weather-app-next-js-fedevillagra.vercel.app/"
   },
   {
-      nombre: "Shopping App",
-      imagen: "./assets/project-3.avif",
-      github: "https://github.com/fedevillagra/Proyecto_Final_Backend",
-      open: "https://backend-proyect-federicovillagra.koyeb.app/"
+    nombre: "Shopping App",
+    imagen: "./assets/project-3.avif",
+    github: "https://github.com/fedevillagra/Proyecto_Final_Backend",
+    open: "https://backend-proyect-federicovillagra.koyeb.app/"
   },
   {
-      nombre: "Tic-Tac-Toe App",
-      imagen: "./assets/project-4.avif",
-      github: "https://github.com/fedevillagra/tic-tac-toe",
-      open: "https://fv-tic-tac-toe.vercel.app/"
+    nombre: "Tic-Tac-Toe App",
+    imagen: "./assets/project-4.avif",
+    github: "https://github.com/fedevillagra/tic-tac-toe",
+    open: "https://fv-tic-tac-toe.vercel.app/"
   }
 ];
 // Función para construir las cards de proyectos
@@ -131,47 +139,55 @@ function construirCards() {
   const container = document.querySelector('#cards');
 
   proyectos.forEach(proyecto => {
-      // Crear contenedor principal
-      const cardContainer = document.createElement('div');
-      cardContainer.classList.add('details-container', 'color-container');
+    // Crear contenedor principal
+    const cardContainer = document.createElement('div');
+    cardContainer.classList.add('details-container', 'color-container');
 
-      // Crear imagen
-      const imagen = document.createElement('img');
-      imagen.src = proyecto.imagen;
-      imagen.alt = proyecto.nombre;
-      imagen.classList.add('project-img');
-      imagen.loading ="lazy";
+    // Crear enlace para la imagen
+    const enlaceImagen = document.createElement('a');
+    enlaceImagen.href = proyecto.open;
+    enlaceImagen.target = "_blank";
 
-      // Crear radius container de imagen
-      const imgRadiusContainer = document.createElement('div');
-      imgRadiusContainer.classList.add('article-radius-container');
-      imgRadiusContainer.appendChild(imagen);
+    // Crear imagen
+    const imagen = document.createElement('img');
+    imagen.src = proyecto.imagen;
+    imagen.alt = proyecto.nombre;
+    imagen.classList.add('project-img');
+    imagen.loading = "lazy";
 
-      // Crear contenedor de imagen y de radius
-      const imgContainer = document.createElement('div');
-      imgContainer.classList.add('article-container','article-container-img');
-      imgContainer.appendChild(imgRadiusContainer);
+    // Añadir imagen al enlace
+    enlaceImagen.appendChild(imagen);
 
-      // Crear título del proyecto
-      const titulo = document.createElement('h2');
-      titulo.textContent = proyecto.nombre;
-      titulo.classList.add('experience-sub-title', 'project-title', 'translate');
+    // Crear radius container de imagen
+    const imgRadiusContainer = document.createElement('div');
+    imgRadiusContainer.classList.add('article-radius-container');
+    imgRadiusContainer.appendChild(enlaceImagen);
 
-      // Crear contenedor de botones
-      const btnContainer = document.createElement('div');
-      btnContainer.classList.add('btn-container');
-      const btnGithub = crearBoton("GitHub", proyecto.github);
-      const btnOpen = crearBoton("Open", proyecto.open);
-      btnContainer.appendChild(btnGithub);
-      btnContainer.appendChild(btnOpen);
+    // Crear contenedor de imagen y de radius
+    const imgContainer = document.createElement('div');
+    imgContainer.classList.add('article-container', 'article-container-img');
+    imgContainer.appendChild(imgRadiusContainer);
 
-      // Agregar elementos al contenedor principal
-      cardContainer.appendChild(imgContainer);
-      cardContainer.appendChild(titulo);
-      cardContainer.appendChild(btnContainer);
+    // Crear título del proyecto
+    const titulo = document.createElement('h2');
+    titulo.textContent = proyecto.nombre;
+    titulo.classList.add('experience-sub-title', 'project-title', 'translate');
 
-      // Agregar contenedor principal al contenedor padre
-      container.appendChild(cardContainer);
+    // Crear contenedor de botones
+    const btnContainer = document.createElement('div');
+    btnContainer.classList.add('btn-container');
+    const btnGithub = crearBoton("GitHub", proyecto.github);
+    const btnOpen = crearBoton("Open", proyecto.open);
+    btnContainer.appendChild(btnGithub);
+    btnContainer.appendChild(btnOpen);
+
+    // Agregar elementos al contenedor principal
+    cardContainer.appendChild(imgContainer);
+    cardContainer.appendChild(titulo);
+    cardContainer.appendChild(btnContainer);
+
+    // Agregar contenedor principal al contenedor padre
+    container.appendChild(cardContainer);
   });
 }
 // Función para crear botones
@@ -179,8 +195,8 @@ function crearBoton(texto, enlace) {
   const boton = document.createElement('button');
   boton.classList.add('btn', 'btn-color-2', 'project-btn');
   boton.textContent = texto;
-  boton.onclick = function() {
-      window.open(enlace, '_blank');
+  boton.onclick = function () {
+    window.open(enlace, '_blank');
   };
   return boton;
 }
@@ -202,75 +218,75 @@ function translatePage(targetLanguage) {
 
   // Iterar sobre los elementos y traducir su texto
   elementsToTranslate.forEach(element => {
-      const textToTranslate = element.textContent.trim();
-      if (textToTranslate !== '') {
-          // URL de la API de Traducción de Google
-          const apiUrl = `https://translation.googleapis.com/language/translate/v2?key=${apiKey}`;
+    const textToTranslate = element.textContent.trim();
+    if (textToTranslate !== '') {
+      // URL de la API de Traducción de Google
+      const apiUrl = `https://translation.googleapis.com/language/translate/v2?key=${apiKey}`;
 
-          // Parámetros de la solicitud
-          const params = {
-              method: 'POST',
-              headers: {
-                  'Content-Type': 'application/json'
-              },
-              body: JSON.stringify({
-                  q: textToTranslate,
-                  target: targetLanguage
-              })
-          };
+      // Parámetros de la solicitud
+      const params = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          q: textToTranslate,
+          target: targetLanguage
+        })
+      };
 
-          // Realizar la solicitud a la API de Traducción de Google
-          const translationPromise = fetch(apiUrl, params)
-              .then(response => response.json())
-              .then(data => {
-                  const translatedText = data.data.translations[0].translatedText;
-                  element.textContent = translatedText; // Actualizar el texto del elemento con la traducción
-              })
-              .catch(error => console.error('Error al traducir el texto:', error));
+      // Realizar la solicitud a la API de Traducción de Google
+      const translationPromise = fetch(apiUrl, params)
+        .then(response => response.json())
+        .then(data => {
+          const translatedText = data.data.translations[0].translatedText;
+          element.textContent = translatedText; // Actualizar el texto del elemento con la traducción
+        })
+        .catch(error => console.error('Error al traducir el texto:', error));
 
-          translationPromises.push(translationPromise);
-      }
+      translationPromises.push(translationPromise);
+    }
   });
 
   // Esperar a que todas las traducciones se completen antes de continuar
   Promise.all(translationPromises)
-      .then(() => console.log('Traducción completada'))
-      .catch(error => console.error('Error al traducir la página:', error));
+    .then(() => console.log('Traducción completada'))
+    .catch(error => console.error('Error al traducir la página:', error));
 }
 
 // Obtener el idioma del navegador del usuario
 const userLanguage = navigator.language || navigator.userLanguage;
 
 // Traducir la página al idioma del usuario automáticamente
-(userLanguage!='en-US') && translatePage(userLanguage);
+(userLanguage != 'en-US') && translatePage(userLanguage);
 // ---------------------------------------------------------------------------------------------
 
 //----------------- visibility ------------------
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll(".nav-links a, .menu-links a");
-  
-    function hideAllSections() {
-      sections.forEach(section => {
-        section.style.display = "none";
-      });
+document.addEventListener("DOMContentLoaded", function () {
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll(".nav-links a, .menu-links a");
+
+  function hideAllSections() {
+    sections.forEach(section => {
+      section.style.display = "none";
+    });
+  }
+
+  function showSection(sectionId) {
+    hideAllSections();
+    const sectionToShow = document.querySelector(sectionId);
+    if (sectionToShow) {
+      sectionToShow.style.display = "";
+      sectionToShow.style.animation = "appear .7s linear both";
     }
-  
-    function showSection(sectionId) {
-      hideAllSections();
-      const sectionToShow = document.querySelector(sectionId);
-      if (sectionToShow) {
-        sectionToShow.style.display = "";
-        sectionToShow.style.animation= "appear .7s linear both";
-      }
-    }
-  
-    navLinks.forEach(link => {
-      link.addEventListener("click", function (event) {
-        event.preventDefault();
-        const targetSection = this.getAttribute("href");
-        showSection(targetSection);
+  }
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+      const targetSection = this.getAttribute("href");
+      showSection(targetSection);
 
       /* Scroll to top when a footer link is clicked*/
       if (this.closest("footer")) {
@@ -281,23 +297,23 @@ const userLanguage = navigator.language || navigator.userLanguage;
       }
 
       // Add clicked class for scale effect
-     navLinks.forEach(navLink => navLink.classList.remove("clicked"));
-     this.classList.add("clicked");
+      navLinks.forEach(navLink => navLink.classList.remove("clicked"));
+      this.classList.add("clicked");
 
-      });
     });
-  
-    // Mostrar una sección por defecto
-    //showSection("#profile"); //el problema es que cuando carga la página por primera vez hace el efecto
-    sections.forEach(section => {
-      (section.id!="profile") && (section.style.display = "none");
-    });
-
   });
+
+  // Mostrar una sección por defecto
+  //showSection("#profile"); //el problema es que cuando carga la página por primera vez hace el efecto
+  sections.forEach(section => {
+    (section.id != "profile") && (section.style.display = "none");
+  });
+
+});
 
 // ---------------------------------------------------------------------------------------------
 
-window.onload = function() {
+window.onload = function () {
   // Reemplaza la clase 'hidden' con 'loaded' cuando la página esté completamente cargada
   document.body.classList.remove('hidden');
   document.body.classList.add('loaded');
