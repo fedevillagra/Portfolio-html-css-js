@@ -184,6 +184,7 @@ section {
 
 .section-container {
   display: flex;
+  justify-content: center;
 }
 
 /* PROFILE SECTION */
