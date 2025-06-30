@@ -57,7 +57,7 @@ const skillsCaontainer = document.getElementById("skills_container");
 for (const category in skills) {
   // Crear elementos HTML para cada categoría
   const categoryContainer = document.createElement("div");
-  categoryContainer.classList.add("details-container");
+  categoryContainer.classList.add("details-container", "smooth-animation");
 
   const categoryTitle = document.createElement("h2");
   categoryTitle.classList.add("experience-sub-title");
@@ -142,7 +142,7 @@ function construirCards() {
   proyectos.forEach(proyecto => {
     // Crear contenedor principal
     const cardContainer = document.createElement('div');
-    cardContainer.classList.add('details-container', 'color-container');
+    cardContainer.classList.add('details-container', 'color-container', 'smooth-animation');
 
     // Crear enlace para la imagen
     const enlaceImagen = document.createElement('a');
@@ -321,3 +321,18 @@ window.onload = function () {
 };
 
 // ---------------------------------------------------------------------------------------------
+
+// --- Animación suave al scrollear en experiencie ---
+
+  const cards = document.querySelectorAll('.smooth-animation');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      entry.target.classList.toggle('show', entry.isIntersecting);
+    });
+  });
+
+  cards.forEach(card => {
+    observer.observe(card);
+    card.classList.add('hidden');
+  });
