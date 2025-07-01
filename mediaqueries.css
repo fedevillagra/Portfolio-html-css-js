@@ -66,12 +66,6 @@
 }
 
 @media screen and (max-width: 600px) {
-  .section__pic-container{
-    width: auto; /* para que las imagenes entren correctamente en la pantalla */
-  }
-  .experience-container{
-    width: auto;
-  }
   .experience-header{
     justify-content: normal;
   }

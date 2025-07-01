@@ -70,7 +70,7 @@ const skillsCaontainer = document.getElementById("skills_container");
 for (const category in skills) {
   // Crear elementos HTML para cada categoría
   const categoryContainer = document.createElement("div");
-  categoryContainer.classList.add("details-container", "smooth-animation");
+  categoryContainer.classList.add("skills-details-container", "smooth-animation");
 
   const categoryTitle = document.createElement("h2");
   categoryTitle.classList.add("experience-sub-title");
@@ -335,7 +335,7 @@ window.onload = function () {
 
 // ---------------------------------------------------------------------------------------------
 
-// --- Animación suave al scrollear en experiencie ---
+// --- Animación suave al scrollear ---
 
   const cards = document.querySelectorAll('.smooth-animation');
 
