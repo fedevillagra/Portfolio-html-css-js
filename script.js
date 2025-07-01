@@ -24,29 +24,42 @@ document.getElementById('anio-actual').textContent = anioActual;
 // --- Construir los cuadros de habilidades ---
 // Definir un objeto con la estructura de datos de las habilidadess
 const skills = {
+      "DevOps": [
+    { technology: "Docker", level: "Experienced" },
+    { technology: "Kubernetes", level: "Experienced" },
+    { technology: "Jenkins", level: "Experienced" },
+    { technology: "AWS", level: "Experienced" },
+    { technology: "Terraform", level: "Experienced" },
+    { technology: "Prometheus", level: "Experienced" }
+  ],
+    "QA": [
+    { technology: "Java", level: "Experienced" },
+    { technology: "Selenium", level: "Experienced" },
+    { technology: "JUnit", level: "Experienced" },
+    { technology: "Maven", level: "Experienced" },
+    { technology: "Git", level: "Experienced" },
+    { technology: "Cucumber ", level: "Experienced" }
+  ],
   "Frontend": [
+    { technology: "React", level: "Experienced" },
+    { technology: "Tailwind", level: "Experienced" },
     { technology: "HTML", level: "Experienced" },
     { technology: "CSS", level: "Experienced" },
     { technology: "JavaScript", level: "Experienced" },
-    { technology: "Bootstrap", level: "Experienced" },
-    { technology: "Tailwind", level: "Experienced" },
-    { technology: "React", level: "Experienced" }
+    { technology: "Bootstrap", level: "Experienced" }
   ],
   "Backend": [
+    { technology: "Java", level: "Experienced" },
     { technology: "Node JS", level: "Experienced" },
     { technology: "Express JS", level: "Experienced" },
     { technology: "Nest JS", level: "Experienced" },
-    { technology: "PHP", level: "Experienced" },
-    { technology: "Java", level: "Experienced" },
-    { technology: "C++", level: "Experienced" }
+    { technology: "PHP", level: "Experienced" }
   ],
-  "Data & DevOps": [
-    { technology: "MongoDB", level: "Experienced" },
-    { technology: "Firebase", level: "Experienced" },
+  "DB": [
+    { technology: "PL/SQL", level: "Experienced" },
     { technology: "MySQL", level: "Experienced" },
-    { technology: "Docker", level: "Experienced" },
-    { technology: "Kubernetes", level: "Experienced" },
-    { technology: "Git", level: "Experienced" }
+    { technology: "MongoDB", level: "Experienced" },
+    { technology: "Firebase", level: "Experienced" }
   ]
 };
 
