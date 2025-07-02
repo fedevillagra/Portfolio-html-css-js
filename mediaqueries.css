@@ -66,6 +66,16 @@
 }
 
 @media screen and (max-width: 600px) {
+  .section__pic-container{
+    width: 300px;
+    height: 300px;
+  }
+  .overlay-text h1{
+    font-size: 20px;
+  }
+  .overlay-text p{
+    font-size: 14px;
+  }
   .experience-header{
     justify-content: normal;
   }
